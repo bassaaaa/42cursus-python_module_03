@@ -10,7 +10,7 @@ def main() -> None:
     else:
         print(f"Arguments received: {len(sys.argv) - 1}")
         index = 1
-        while index < len(sys.argv[index]):
+        while index < len(sys.argv):
             print(f"Argument {index}: {sys.argv[index]}")
             index += 1
 
