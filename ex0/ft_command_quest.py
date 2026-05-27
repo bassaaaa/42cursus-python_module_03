@@ -10,8 +10,8 @@ def main() -> None:
     else:
         print(f"Arguments received: {len(sys.argv) - 1}")
         index = 1
-        for arg in sys.argv[1:]:
-            print(f"Argument {index}: {arg}")
+        while index < len(sys.argv[index]):
+            print(f"Argument {index}: {sys.argv[index]}")
             index += 1
 
     print(f"Total arguments: {len(sys.argv)}")
