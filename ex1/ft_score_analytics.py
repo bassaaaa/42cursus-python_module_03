@@ -6,14 +6,11 @@ def main() -> None:
 
     print("=== Player Score Analytics ===")
 
-    index = 1
-    while index < len(sys.argv):
-        arg = sys.argv[index]
+    for arg in sys.argv[1:]:
         try:
-            scores += [int(arg)]
+            scores.append(int(arg))
         except ValueError:
             print(f"Invalid parameter: '{arg}'")
-        index += 1
 
     if len(scores) == 0:
         print(
