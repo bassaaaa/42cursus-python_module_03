@@ -29,9 +29,13 @@ def print_item_percentages(
     total_quantity: int,
 ) -> None:
     for key in inventory.keys():
+        if total_quantity == 0:
+            percentage = 0.0
+        else:
+            percentage = round(inventory[key] / total_quantity * 100, 1)
         print(
             f"Item {key} represents "
-            f"{round(inventory[key] / total_quantity * 100, 1)}%"
+            f"{percentage}%"
         )
 
 
