@@ -63,6 +63,13 @@ def find_least_abundant_item(inventory: dict[str, int]) -> str:
 
 def main() -> None:
     print("=== Inventory System Analysis ===")
+    if len(sys.argv) < 2:
+        print(
+            "No items provided. Usage: "
+            "python3 ft_inventory_system.py <item_name>:<quantity> ..."
+        )
+        return
+
     inventory = fill_inventory(sys.argv[1:])
 
     if len(inventory) == 0:
